@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>ars_login Multicharacter</title>
+</head>
+
+<body style="display: none;" class="h-screen w-screen">
+    <div style="display: none;" class="login h-[100vh] w-[100%] flex items-center justify-between">
+        <div class="ml-[8vh] h-[100%] w-[32vh] flex justify-end items-start">
+            <div
+                class="mt-[10vh] h-[45vh] w-[100%] bg-[#111116] rounded-[2vh] flex flex-col items-center justify-start gap-[2vh]">
+                <div
+                    class="mt-[2.5vh] h-[3.5vh] w-[6vh] bg-[#d0905f] shadow-2xl shadow-[#d0905f] skew-x-[-5deg] rounded-[0.5vh] flex justify-center items-center">
+                    <i class="text-white text-[2vh] fa-solid fa-users"></i>
+                </div>
+                <h1 class="charsel-title uppercase text-white text-[2.2vh] font-[600] text-center">CHARACTER SELECTION
+                </h1>
+                <div
+                    class="lista-perssonaggi h-[65%] w-[90%] flex flex-col justify-start items-center gap-[1.5vh] overflow-y-scroll">
+                </div>
+            </div>
+        </div>
+        <div style="display:none;" class="select h-[100%] flex justify-end items-end">
+            <div
+                class="mb-[10vh] h-[4vh] w-auto pl-[3vh] pr-[3vh] skew-x-[-5deg] cursor-pointer hover:bg-[#0c5e44] rounded-[0.5vh] bg-[#d0905f] flex items-center justify-center">
+                <h1 class="selectpg-btn uppercase font-[600] text-white text-[2vh]">SELECT</h1>
+            </div>
+        </div>
+        <div class=" h-[100%] w-[35vh] mr-[8vh] flex justify-end items-center">
+            <div style="display:none;"
+                class="info-pg h-[50vh] w-[100%] bg-[#111116] rounded-[1vh] flex flex-col items-center justify-start gap-[2vh]">
+                <div
+                    class="mt-[2.5vh] h-[3.5vh] w-[6vh] bg-[#d0905f] shadow-2xl shadow-[#d0905f] skew-x-[-5deg] rounded-[0.5vh] flex justify-center items-center">
+                    <i class="text-white text-[2vh] fa-solid fa-id-card-clip"></i>
+                </div>
+                <h1 class="text-white text-[2.2vh] font-[600] text-center nome-pl">Noyz Offset</h1>
+                <div class="w-[85%] h-[4vh] flex justify-between items-center border-b-[0.1vh] border-[#99999b]">
+                    <h2 class="text-[#99999b] text-[2vh] font-[600]"><i class="text-[#d0905f] fa-solid fa-venus"></i>
+                        Gender</h2>
+                    <h2 class="text-white text-[2vh] font-[600] sesso-bello">Male</h2>
+                </div>
+                <div class="w-[85%] h-[4vh] flex justify-between items-center border-b-[0.1vh] border-[#99999b]">
+                    <h2 class="text-[#99999b] text-[2vh] font-[600]"><i
+                            class="text-[#d0905f] fa-solid fa-calendar-days"></i> Date</h2>
+                    <h2 class="text-white text-[2vh] font-[600] data">12/12/2000</h2>
+                </div>
+                <div class="w-[85%] h-[4vh] flex justify-between items-center border-b-[0.1vh] border-[#99999b]">
+                    <h2 class="text-[#99999b] text-[2vh] font-[600]"><i class="text-[#d0905f] fa-solid fa-coins"></i>
+                        Money</h2>
+                    <h2 class="text-white text-[2vh] font-[600] money">10.000$</h2>
+                </div>
+                <div class="w-[85%] h-[4vh] flex justify-between items-center border-b-[0.1vh] border-[#99999b]">
+                    <h2 class="text-[#99999b] text-[2vh] font-[600]"><i class="text-[#d0905f] fa-solid fa-landmark"></i>
+                        Bank</h2>
+                    <h2 class="text-white text-[2vh] font-[600] bank">50.0000</h2>
+                </div>
+                <div class="w-[85%] h-[4vh] flex justify-between items-center border-b-[0.1vh] border-[#99999b]">
+                    <h2 class="text-[#99999b] text-[2vh] font-[600]"><i
+                            class="text-[#d0905f] fa-solid fa-stopwatch-20"></i> Played</h2>
+                    <h2 class="text-white text-[2vh] font-[600] online">1 min</h2>
+                </div>
+            </div>
+            <div style="display: none;"
+                class=" creaPg h-[50vh] w-[100%] bg-[#111116] rounded-[2vh] flex flex-col items-center justify-start gap-[2vh]">
+                <div
+                    class="mt-[2.5vh] h-[3.5vh] w-[6vh] bg-[#d0905f] shadow-2xl shadow-[#d0905f] skew-x-[-5deg] rounded-[0.5vh] flex justify-center items-center">
+                    <i class="text-white text-[2vh] fa-solid fa-circle-plus"></i>
+                </div>
+                <h1 class="text-white text-[2.2vh] font-[600] text-center uppercase">CREATE CHARACTER</h1>
+                <div class="h-[4vh] w-[90%] bg-[#1b1b2200] rounded-[0.7vh] flex items-center justify-between">
+                    <i class="ml-[2vh] text-[2vh] text-[#d0905f] fa-solid fa-circle-user"></i>
+                    <input
+                        class=" nome-input bg-transparent w-[80%] h-[100%] outline-none text-[#99999b] placeholder:text-[#99999b] text-[1.6dvh]"
+                        placeholder="First Name">
+                </div>
+                <div class="h-[4vh] w-[90%] bg-[#1b1b22] rounded-[0.7vh] flex items-center justify-between">
+                    <i class="ml-[2vh] text-[2vh] text-[#d0905f] fa-solid fa-users"></i>
+                    <input
+                        class="cognome-input bg-transparent w-[80%] h-[100%] outline-none text-[#99999b] placeholder:text-[#99999b] text-[1.6dvh]"
+                        placeholder="Last Name">
+                </div>
+                <div class="h-[4vh] w-[90%] bg-[#1b1b22] rounded-[0.7vh] flex items-center justify-between">
+                    <i class="ml-[2vh] text-[2vh] text-[#d0905f] fa-solid fa-person"></i>
+                    <input
+                        class="altezza-input bg-transparent w-[80%] h-[100%] outline-none text-[#99999b] placeholder:text-[#99999b] text-[1.6dvh]"
+                        placeholder="Height (cm)" type="number" maxlength="3" data-maxval="200" min="120" max="220"
+                        oninput="HeightLimited(this, 200)">
+                </div>
+                <div class="h-[4vh] w-[90%] bg-[#1b1b22] rounded-[0.7vh] flex items-center justify-between">
+                    <i class="ml-[2vh] text-[2vh] text-[#d0905f] fa-solid fa-calendar-days"></i>
+                    <input
+                        class="data-input bg-transparent w-[80%] h-[100%] outline-none text-[#99999b] placeholder:text-[#99999b] text-[1.6dvh]"
+                        type="date" min="1920-01-01" max="2023-08-28">
+                </div>
+
+                <div class="h-[4vh] w-[90%] bg-[#1b1b2255] rounded-[0.7vh] flex items-center justify-start">
+                    <i class="ml-[2vh] text-[2vh] text-[#d0905f] fa-solid fa-dna"></i>
+                    <select class="ml-[2.3vh] bg-transparent w-auto h-[100%] text-[#99999b] outline-none border-none">
+                        <option class="bg-[#1b1b22] outline-none border-none text-white" value="m">Male</option>
+                        <option class="bg-[#1b1b22] outline-none border-none text-white" value="f">Female</option>
+                    </select>
+                </div>
+                <div
+                    class="uppercase create-btn h-[5vh] mb-[0.5vh] w-[50%] bg-[#282830] rounded-[0.7vh] flex justify-center items-center text-white font-[600] tracking-[0.1vh]">
+                    <h1>CREATE</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="display: none;" class="spawn h-[100vh] w-[100%] bg- flex justify-end items-end"
+        style="background: rgb(8,117,82);background: linear-gradient(36deg, rgba(8,117,82,0.5214460784313726) 15%, rgba(185,172,172,0) 85%)">
+        <!--style="background: rgb(8,117,82);background: linear-gradient(36deg, rgba(8,117,82,0.5214460784313726) 15%, rgba(185,172,172,0) 85%);-->
+        <div class="h-[20vh] w-[100%] flex justify-center items-center">
+            <div class="h-[100%] w-auto flex flex-col justify-start items-center">
+                <h1 class="spawn-label text-white text-[2.5vh] font-[600]">PALETO BAY</h1>
+                <h1 style="display: none;"
+                    class="last-pos text-white hover:text-[#585858] cursor-pointer  text-[1.5vh] font-bold">LAST
+                    POSITION
+                </h1>
+                <div class="h-[10vh] w-auto flex justify-center items-center gap-[3vh]">
+                    <div
+                        class="ind h-[5vh] w-[5vh] bg-[#1b1b22] cursor-pointer hover:bg-[#202027] hover:text-[#99999b] hover:scale-90 ease-in-out duration-300  text-white  border-solid border-[0.2vh] border-[#99999b]  rounded-[0.7vh] flex justify-center items-center">
+                        <i class="fa-solid fa-chevron-left text-[3vh]"></i>
+                    </div>
+                    <div
+                        class="spawn-btn h-[7vh] w-[17vh] bg-[#d0905f] hover:bg-[#0c5e44] rounded-[0.7vh] flex justify-center items-center">
+                        <h1 class="text-white text-[2.5vh] font-[600]">SPAWN</h1>
+                    </div>
+                    <div
+                        class="ava h-[5vh] w-[5vh] bg-[#1b1b22] cursor-pointer hover:bg-[#202027] hover:text-[#99999b] hover:scale-90 ease-in-out duration-300  text-white  border-solid border-[0.2vh] border-[#99999b]  rounded-[0.7vh] flex justify-center items-center">
+                        <i class="fa-solid fa-chevron-right text-[3vh]"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="display: none;"
+        class="pannel absolute flex flex-col justify-start h-[60vh] w-[105vh] bg-[#19181c] left-[50%] rounded-[1vh] top-[50%] translate-y-[-50%] translate-x-[-50%]">
+        <div class="h-[15%] w-[100%] flex justify-between items-center">
+            <h1 class="ml-[2vh] text-[2vh] text-white font-[600]"><i class="fa-solid fa-users"></i> CHARACTERS PANNEL
+            </h1>
+            <div class="bg-[#2f2e33] rounded-[0.5vh] mr-[2vh] h-[3vh] w-auto flex justify-center items-center">
+                <i class="ml-[1vh] text-[1.7vh] text-[#5c5a61] fa-solid fa-magnifying-glass"></i>
+                <input onkeyup="myFunction()" id="myInput"
+                    class="h-[100%] w-[87%] text-[1.3vh] text-white placeholder:text-[#5c5a61] placeholder:font-[600] outline-none bg-transparent"
+                    placeholder="SEARCH...">
+            </div>
+        </div>
+        <div id="myUL" style="display: none;"
+            class="users overflow-y-scroll  mb-[2vh] h-[80%] w-[100%] flex flex-col justify-start items-center gap-[0.5vh]">
+        </div>
+        <div style="display: none;"
+            class=" pg-list overflow-y-scroll mb-[2vh] h-[80%] w-[100%] flex flex-col justify-start items-center gap-[0.5vh]">
+        </div>
+        <div class="h-auto w-[100%] flex justify-center items-center">
+            <div style="display: none;"
+                class="back mr-[2vh] mb-[1vh] h-[3vh] w-auto pl-[1vh] pr-[1vh] bg-[#d0905f] cursor-pointer hover:bg-[#d0905f] hover:text-[#99999b] text-white rounded-[0.4vh] flex justify-center items-center">
+                <h1 class="text-white text-[1.8vh]">BACK</h1>
+            </div>
+        </div>
+    </div>
+    <div style="display: none;"
+        class="setPg absolute flex flex-col justify-start items-center h-auto w-auto left-[50%] top-[50%] translate-y-[-50%] translate-x-[-50%] gap-[1.5vh]">
+        <h1 class="text-white text-[1.7vh] font-[400]">How many characters do you want to set for this player?</h1>
+        <div class="flex justify-center items-center gap-[2vh]">
+            <div
+                class="rempg h-[2.5vh] w-[2.5vh] bg-[#0f0f13] cursor-pointer hover:bg-[#202027] hover:text-[#99999b] text-white rounded-[0.4vh] flex justify-center items-center">
+                <i class="text-[1.7vh] fa-solid fa-chevron-left"></i>
+            </div>
+            <div
+                class="h-[2.5vh] min-w-[6vh] w-auto pl-[1vh] pr-[1vh] border-[0.1vh] border-solid border-[#717172] bg-[#0f0f13] flex justify-center items-center rounded-[0.4vh] ">
+                <h1 class="index-pg text-white text-[1.7vh]">1</h1>
+            </div>
+            <div
+                class="addpg h-[2.5vh] w-[2.5vh] bg-[#0f0f13] cursor-pointer hover:bg-[#202027] hover:text-[#99999b] text-white rounded-[0.4vh] flex justify-center items-center">
+                <i class="fa-solid fa-chevron-right text-[1.7vh]"></i>
+            </div>
+        </div>
+        <div
+            class="conferma-pg h-[3vh] w-auto pl-[1vh] pr-[1vh] cursor-pointer bg-[#0f0f13]  hover:bg-[#1d1d22] flex justify-center items-center rounded-[0.6vh] ">
+            <h1 class="text-[#d3d2d4] text-[1.7vh]">CONFIRM</h1>
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+            var input, filter, ul, li, a, i, txtValue;
+            input = document.getElementById('myInput');
+            filter = input.value.toUpperCase();
+            ul = document.getElementById("myUL");
+            li = ul.getElementsByTagName('section');
+
+            for (i = 0; i < li.length; i++) {
+                var paragraphs = li[i].getElementsByTagName("p");
+                var found = false;
+
+                for (var j = 0; j < paragraphs.length; j++) {
+                    txtValue = paragraphs[j].textContent || paragraphs[j].innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        found = true;
+                        break;
+                    }
+                }
+
+                if (found) {
+                    li[i].style.display = "";
+                } else {
+                    li[i].style.display = "none";
+                }
+            }
+        }
+    </script>
+    <script src="js/script.js"></script>
+    <style>
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+        body {
+            font-family: Inter, sans-serif;
+            user-select: none;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        input[type="date"]::-webkit-calendar-picker-indicator {
+            display: none;
+            -webkit-appearance: none;
+        }
+    </style>
+</body>
+
+</html>
