@@ -174,7 +174,7 @@ $('.create-btn').on('click', function (e) {
         $('.login').css('display', 'none');
         $('.creaPg').css('display', 'none');
     } else {
-        console.log('compila negro di merda bastrardo del cazzo')
+        console.log('Please fill the inputs')
     }
 
 })
