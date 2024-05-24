@@ -1,3 +1,8 @@
+MySQL.query([[
+    ALTER TABLE users ADD COLUMN IF NOT EXISTS steam VARCHAR(255) NOT NULL DEFAULT 'N/A',
+    ADD COLUMN IF NOT EXISTS time INT DEFAULT 0;
+]])
+
 local table_exist = MySQL.query.await('SHOW TABLES LIKE ?', { 'ars_login' })
 
 if #table_exist > 0 then return end
@@ -10,5 +15,3 @@ MySQL.query([[
         PRIMARY KEY (`identifier`)
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 ]])
-
-print("The [^4ars_login^7] table in db has been created correctly")
